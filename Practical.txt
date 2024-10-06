@@ -1,0 +1,186 @@
+A] Aim: write a program to take 4 inputs from user and perform arithemetic operations.
+
+CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace PRACTICAL1
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ double num1, num2, num3, num4;
+ Console.WriteLine("Enter first number:");
+ num1 = Convert.ToDouble(Console.ReadLine());
+ Console.WriteLine("Enter second number:");
+ num2 = Convert.ToDouble(Console.ReadLine());
+ Console.WriteLine("Enter third number:");
+ num3 = Convert.ToDouble(Console.ReadLine());
+ Console.WriteLine("Enter fourth number:");
+ num4 = Convert.ToDouble(Console.ReadLine());
+ double sum = num1 + num2 + num3 + num4;
+ double difference = num1 - num2 - num3 - num4;
+ double product = num1 * num2 * num3 * num4;
+ double average = sum / 4;
+ Console.WriteLine("Sum: " + sum);
+ Console.WriteLine("Difference: " + difference);
+ Console.WriteLine("Product: " + product);
+ Console.WriteLine("Average: " + average);
+ Console.ReadKey();
+ }
+ }
+}
+
+
+
+
+
+
+B] Aim: if you have two integers stored in variables var1 and var2, what Boolean tests can
+you perform to see if one or the other (but not both) is greater than 10.
+
+using System;
+
+namespace P1B
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the first number (var1):");
+            int var1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the second number (var2):");
+            int var2 = Convert.ToInt32(Console.ReadLine());
+
+            bool result = (var1 > 10) ^ (var2 > 10);
+
+            if (result)
+            {
+                Console.WriteLine("One of the numbers is greater than 10, but not both.");
+            }
+            else
+            {
+                Console.WriteLine("Either both numbers are greater than 10, or both are less than or equal to 10.");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+
+C] Aim: check whether number is prime number or not.
+CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace P1C
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ Console.WriteLine("Enter a number :");
+ int number = Convert.ToInt32(Console.ReadLine());
+ bool isPrime = true;
+ if (number <= 1)
+ {
+ isPrime = false;
+ }
+ else
+ {
+ for (int i = 2; i <= number / 2; i++)
+ {
+ if (number % i == 0)
+{
+ isPrime = false;
+break;
+ }
+ }
+ }
+ if (isPrime)
+ {
+ Console.WriteLine(number + " is a prime number.");
+ }
+ else
+ {
+ Console.WriteLine(number + " is not a prime number.");
+ }
+ Console.ReadKey();
+ }
+ }
+}
+
+
+
+
+
+
+D] Aim: write a program to print Fibonacci series
+CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace P1D
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ Console.WriteLine("Enter the number of terms in the Fibonacci series:");
+ int terms = Convert.ToInt32(Console.ReadLine());
+ int o = 0, vo = 1, c = 0;
+ Console.WriteLine("Fibonacci Series:");
+ for (int i = 1; i <= terms; i++)
+ {
+ Console.Write(c + " ");
+ c = o + vo;
+ vo = o;
+ o = c;
+ }
+ Console.ReadKey();
+ }
+ }
+}
+
+
+
+
+
+E] Aim: write a program to print Reverse number.
+CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace P1E
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ Console.Write("Enter a number:");
+ int number = Convert.ToInt32(Console.ReadLine());
+ int reverse = 0;
+ while (number != 0)
+ {
+ int digit = number % 10;
+ reverse = reverse * 10 + digit;
+ number /= 10;
+ }
+ Console.WriteLine("Reversed number: " + reverse);
+ Console.ReadKey();
+ }
+ }
+}
+
+
+
+
